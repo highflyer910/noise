@@ -1,0 +1,21 @@
+body {
+    font-family: 'Baloo Bhaijaan', cursive;
+    text-align: center;
+    background-color: #181619;
+}
+
+header {
+    height: 44px;
+    margin-bottom: 15px;
+    color: #E4DED0;
+}
+
+
+#container {
+    padding-bottom: 36px;
+
+}
+
+canvas {
+    border: 8px solid #E4DED0;
+}
