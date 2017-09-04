@@ -23,27 +23,19 @@ $(document).ready(function () {
 		id.data[index+3] = a;
 	};
 
+	var shade = 0;
+
 	function noise() {
-		var posX = 0,
-			posY = 0;
 
-		for (var i = 0; i < 480000; i++) {
-
-			if (color == 'mono') {
-				var shade = Math.random() * 255;
+		for (var i = 0; i < h; i++) {
+			for (var j = 0; j < w; j++) {
+				shade = Math.random() * 255;
 				r = shade;
 				g = shade;
 				b = shade;
-			}
 			
-			makeSpot(id, posX, posY, r, g, b, 255);
-
-			posX++;
-
-			if (posX % w == 0) {
-				posX = 0;
-				posY++;
-			}
+				makeSpot(id, j, i, r, g, b, 255);
+		        }
 		}
 		ctx.putImageData(id, 0, 0);
 
@@ -52,4 +44,3 @@ $(document).ready(function () {
 
 	noise();
 });
-
